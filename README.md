@@ -5,6 +5,13 @@ This component helps users bridge skill gaps by generating a **structured, time-
 
 ---
 
+## 🌐 Live Project
+
+🔗 **Live Demo:**  
+https://v0-resume-skill-gap-analyzer-delta.vercel.app/
+
+---
+
 ## 🚀 Features
 
 - 📊 Automatic skill prioritization (**High / Medium / Low**)
@@ -23,7 +30,7 @@ This component helps users bridge skill gaps by generating a **structured, time-
 - **TypeScript (.tsx)**
 - **ShadCN UI**
 - **Tailwind CSS**
-- **Lucide Icons**
+- **Lucide React Icons**
 
 ---
 
@@ -32,15 +39,24 @@ This component helps users bridge skill gaps by generating a **structured, time-
 ### `LearningPlanModal.tsx`
 
 This component renders a modal dialog that:
-- Accepts missing skills and matched skills as props
+- Accepts missing and matched skills as props
 - Groups skills into learning phases
-- Calculates total learning time
+- Calculates total learning time dynamically
 - Displays actionable learning steps
-- Encourages systematic upskilling
+- Encourages systematic upskilling for job readiness
 
 ---
 
 ## 📥 Props Interface
+
+```ts
+interface LearningPlanModalProps {
+  open: boolean
+  onOpenChange: (open: boolean) => void
+  missingSkills: MissingSkill[]
+  matchedSkills: MatchedSkill[]
+}
+
 
 ```ts
 interface LearningPlanModalProps {
